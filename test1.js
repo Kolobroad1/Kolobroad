@@ -1,1 +1,1 @@
-let situation = `Pisos`
+let situation = new string(`PISOS`);
