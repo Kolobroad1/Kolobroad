@@ -1,2 +1,2 @@
 let situation = new string(`PISOS`);
-let usarname = `Dolbonushka`;
+let username = `Dolbonushka`;
