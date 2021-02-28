@@ -1,2 +1,2 @@
 let situation = new string(`PISOS`);
-let username = `Dolbonushka`;
+let situation1 = new stirng("Sasuke UCHIHA!!!")
