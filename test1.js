@@ -1,1 +1,1 @@
-Pisos
+let situation = new string(`PISOS`)
