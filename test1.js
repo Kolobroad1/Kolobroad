@@ -1,3 +1,9 @@
-let situation = new string(`PISOS`);
-let situation1 = new stirng("Sasuke UCHIHA!!!");
-let heey = undefined;
+function User(name) {
+    this.name = name;
+    this.Mood = `Obdolbalsya`
+}
+let me = new User(`Radik`);
+let you = new User(`Sergey`)
+
+console.log(me);
+console.log(you);
