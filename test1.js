@@ -10,7 +10,7 @@ class Human { // Обьявление классв
 class Coder extends Human { //Указываем что класс Coder наследует Human
     constructor(name, surname, age, gender, mood) { //конструктор Кодера
         super(name, surname, age, gender); //Указываем что используем в конструктор родителя Human(как суперкласс)
-        this.mood = mood; //Добавляем собсвтенное свойство к уже сделаным родителем полям
+        this.mood = new String(mood); //Добавляем собсвтенное свойство к уже сделаным родителем полям
     }
     get fullName() { // Достаем полное имя
         return this.name + ` ` + this.surname;
