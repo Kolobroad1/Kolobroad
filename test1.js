@@ -24,8 +24,8 @@ let Rad = new Coder(`Radik`, `Shevch`, 22, `Male`, `IndRabotka`);
 let Serg = new Coder(`Sergey`, `Dybinsk`, 22, `Male`, `UbiRabotka`);
 
 console.log(`hey,${boozer.name}, ${boozer.age}, ${boozer.gender}, youre a ${boozer.constructor.name}`);
-console.log(`Hello, my name is ${Rad.fullName}, my age is ${Rad.age}, and im ${Rad.gender},my mood is ${Rad.mood} and im a ${Rad.constructor.name}`);
-console.log(`Hello, my name is ${Serg.fullName}, my age is ${Serg.age}, and im ${Serg.gender},my mood is ${Serg.mood} and im a ${Serg.constructor.name}`);
+console.log(`Hello, my name is ${Rad.fullName}, my age is ${Rad.age}, and im ${Rad.gender},my mood is ${Rad.mood} and im a ${Rad.constructor.name},my parental class is ${Rad.constructor.__proto__.name}`) // В конце строки вызываем имя родительского класса Human из класса Coder;
+console.log(`Hello, my name is ${Serg.fullName}, my age is ${Serg.age}, and im ${Serg.gender},my mood is ${Serg.mood} and im a ${Serg.constructor.name},my parental class is ${Rad.constructor.__proto__.name}`);
 console.log(Serg);
 // Конец
 console.log(`end`)
