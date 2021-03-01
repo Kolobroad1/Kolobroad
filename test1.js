@@ -6,12 +6,15 @@ class Human { // Обьявление классв
         this.gender = new String(gender);
         this.fullName = new String(this.name + ` ` + this.surname);
     }
+    introduce() { //метод Представиться
+        return `Hello, my name is ${this.fullName}, my age is ${this.age}, and im ${this.gender}, my mood is ${this.mood} and im a ${this.constructor.name}, my parental class is ${this.constructor.__proto__.name}\n`
+    }
 }
 
 
 class Coder extends Human { //Указываем что класс Coder наследует Human
-    constructor(name, surname, age, gender, mood, fullName) { //конструктор Кодера
-        super(name, surname, age, gender, fullName); //Указываем что используем в конструктор родителя Human(как суперкласс)
+    constructor(name, surname, age, gender, mood, fullName, introduce) { //конструктор Кодера
+        super(name, surname, age, gender, fullName, introduce); //Указываем что используем в конструктор родителя Human(как суперкласс)
         this.mood = new String(mood); //Добавляем собсвтенное свойство к уже сделаным родителем полям
     }
 
@@ -19,28 +22,27 @@ class Coder extends Human { //Указываем что класс Coder нас�
 
 
 class boozer extends Human { //Указываем что класс Бухарь наследует Human
-    constructor(name, surname, age, gender, mood, fullName, Alcohol) { //конструктор Бухаря
-        super(name, surname, age, gender, fullName); //Указываем что используем в конструктор родителя Human(как суперкласс)
+    constructor(name, surname, age, gender, mood, Alcohol, fullName, introduce) { //конструктор Бухаря
+        super(name, surname, age, gender, fullName, introduce); //Указываем что используем в конструктор родителя Human(как суперкласс)
         this.mood = new String(mood); //Добавляем собсвтенное свойство к уже сделаным родителем полям
         this.Alcohol = Alcohol;
+        this.introduce = function() { //полиморфизм, мы наследуем родительский метод и меняем его содержимое
+            return `Hello, my name is ${this.fullName}, my age is ${this.age}, and im ${this.gender}, my mood is ${this.mood} and im a ${this.constructor.name}, my parental class is ${this.constructor.__proto__.name}, also i love a ${this.Alcohol}\n`
+        }
     }
 };
 
 
 // Создаем Обьекты и выводим их в консоль
-let Vasia = new boozer(`Vasia`, `Petrovich`, 55, `Male`, `"Пошел ты!"`);
-Vasia.Alcohol = `Baltika 7`
+let Vasia = new boozer(`Vasia`, `Petrovich`, 55, `Male`, `"Пошел ты!"`, "Baltika 7");
 let Rad = new Coder(`Radik`, `Shevch`, 22, `Male`, `"УИИИ работка оборудование"`);
 let Serg = new Coder(`Sergey`, `Dybinsk`, 22, `Male`, `"Уииии работка тестирование!"`);
 
 
-function introduce(Object) {
-    return console.log(`Hello, my name is ${Object.fullName}, my age is ${Object.age}, and im ${Object.gender}, my mood is ${Object.mood} and im a ${Object.constructor.name}, my parental class is ${Object.constructor.__proto__.name}`)
-}
 
-introduce(Vasia);
-introduce(Rad);
-introduce(Serg);
+console.log(Vasia.introduce());
+console.log(Rad.introduce());
+console.log(Serg.introduce());
 
 
 // Конец
