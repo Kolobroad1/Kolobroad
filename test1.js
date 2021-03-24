@@ -34,7 +34,7 @@ class boozer extends Human { //Указываем что класс Бухарь
 
 
 // Создаем Обьекты и выводим их в консоль
-let Vasia = new boozer(`Vasia`, `Petrovich`, 55, `Male`, `"Пошел ты!"`, "Baltika 7");
+let Vasia = new boozer(`Vasia`, `Petrovich`, 55, `Male`, `"Пошел ты!"`, "Becherovka");
 let Rad = new Coder(`Radik`, `Shevch`, 22, `Male`, `"УИИИ работка оборудование"`);
 let Serg = new Coder(`Sergey`, `Dybinsk`, 22, `Male`, `"Уииии работка тестирование!"`);
 
